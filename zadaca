@@ -47,3 +47,8 @@ namespace ConsoleApp18
         }
     }
 }
+
+
+Tuka mi dava greska koja nemozam da ja otkrijam
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0029	Cannot implicitly convert type 'System.Collections.Generic.List<int>' to 'int'	ConsoleApp18	C:\Users\Setec313\Documents\ConsoleApp18\ConsoleApp18\Program.cs	31	Active
