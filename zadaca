@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp18
+{
+    class Program
+    {
+        static bool isFibonacci(int n)
+        {
+            int a = 0, b = 1, c = 0;
+            while(c < n)
+            {
+                c = a + b;
+                if (c == b)
+                {
+                    return true;
+                }
+                a = b;
+                b = c;
+            }
+            return false;
+        }
+
+        static int findLargestNumber(List<int> numbers)
+        {
+            numbers.Sort();
+            numbers.Reverse();
+            return numbers.Take(1).ToList();
+        }
+        static void Main(string[] args)
+        {
+            List<int> numbers = new List<int> { 3, 5, 1, 7, 4, 9, 2 };
+            int largestNumber;
+            largestNumber = findLargestNumber(numbers);
+
+            if(isFibonacci(largestNumber))
+            {
+                Console.WriteLine(largestNumber + " pripagja vo nizata na Fibonachi");
+            }else
+            {
+                Console.WriteLine(largestNumber + " ne pripagja vo nizata na Fibonachi");
+            }
+
+        }
+    }
+}
